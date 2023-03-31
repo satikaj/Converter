@@ -6,103 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Spinner
-        android:id="@+id/spnToUnit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="171dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="178dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+    <View
+        android:id="@+id/view"
+        android:layout_width="413dp"
+        android:layout_height="289dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnConvert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnUnitType" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="412dp"
+        android:layout_height="284dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
 
     <Spinner
-        android:id="@+id/spnUnitType"
+        android:id="@+id/spnToUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="182dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="47dp"
-        app:layout_constraintBottom_toTopOf="@+id/spnToUnit"
-        app:layout_constraintEnd_toStartOf="@+id/spnToUnit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="142dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toEndOf="@+id/txtResult"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <Spinner
         android:id="@+id/spnFromUnit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="171dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtInput"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="146dp"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/edtInput"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <Spinner
+        android:id="@+id/spnUnitType"
+        android:layout_width="411dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/purple_500"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtInput"
-        android:layout_width="190dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="121dp"
+        android:layout_width="184dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="111dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/txtResult"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnFromUnit" />
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnConvert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="105dp"
+        android:layout_width="413dp"
+        android:layout_height="68dp"
+        android:background="@color/purple_500"
         android:text="Convert"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="90dp"
-        android:text="To"
-        app:layout_constraintBottom_toTopOf="@+id/edtInput"
-        app:layout_constraintEnd_toStartOf="@+id/spnToUnit"
-        app:layout_constraintStart_toEndOf="@+id/spnFromUnit"
-        app:layout_constraintTop_toTopOf="@+id/spnFromUnit" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="312dp"
-        android:text="Answer:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtResult"
-        app:layout_constraintStart_toStartOf="@+id/edtInput"
-        app:layout_constraintTop_toBottomOf="@+id/spnToUnit" />
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <TextView
         android:id="@+id/txtResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="91dp"
-        android:text="Input value to convert"
+        android:layout_width="184dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="118dp"
+        android:text="1"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnConvert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtInput" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

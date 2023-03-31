@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         View view = binding.getRoot();
         setContentView(view);
 
-        ArrayAdapter<CharSequence> unitTypeAdapter = ArrayAdapter.createFromResource(this, R.array.unit_types, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> unitTypeAdapter = ArrayAdapter.createFromResource(this, R.array.unit_types, R.layout.spinner_item);
         unitTypeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spnUnitType.setAdapter(unitTypeAdapter);
         binding.spnUnitType.setOnItemSelectedListener(this);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private void setUnitSpinnerItems(int unitArrayId) {
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, unitArrayId, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, unitArrayId, R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spnFromUnit.setAdapter(adapter);
         binding.spnFromUnit.setOnItemSelectedListener(this);
