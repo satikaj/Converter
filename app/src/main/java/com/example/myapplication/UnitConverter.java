@@ -27,6 +27,9 @@ public class UnitConverter {
 
     public static double convertTemp(int fromUnitIdx, int toUnitIdx, double input) {
         final int CELSIUS = 0, FAHRENHEIT = 1, KELVIN = 2;
+        if (fromUnitIdx == CELSIUS && toUnitIdx == CELSIUS) return input;
+        if (fromUnitIdx == FAHRENHEIT && toUnitIdx == FAHRENHEIT) return input;
+        if (fromUnitIdx == KELVIN && toUnitIdx == KELVIN) return input;
         if (fromUnitIdx == CELSIUS && toUnitIdx == FAHRENHEIT) return celsiusToFahrenheit(input);
         if (fromUnitIdx == FAHRENHEIT && toUnitIdx == CELSIUS) return fahrenheitToCelsius(input);
         if (fromUnitIdx == CELSIUS && toUnitIdx == KELVIN) return celsiusToKelvin(input);
