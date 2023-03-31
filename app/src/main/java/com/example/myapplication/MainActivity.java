@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
         if (parent == binding.spnUnitType) {
+            binding.edtInput.setText("1");
+            binding.txtResult.setText("1");
             unitType = parent.getItemAtPosition(pos).toString();
             switch(pos) {
                 case 0:
