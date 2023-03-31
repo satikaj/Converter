@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
 
@@ -30,11 +31,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         binding.btnConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double input = Double.parseDouble(binding.edtInput.getText().toString());
-                double result;
-                if (unitType.equals("Temperature")) result = UnitConverter.convertTemp(fromUnitPos, toUnitPos, input);
-                else result = UnitConverter.convert(unitType, fromUnitPos, toUnitPos, input);
-                binding.txtResult.setText(String.format("%.2f", result));
+                try {
+                    double input = Double.parseDouble(binding.edtInput.getText().toString());
+                    double result;
+                    if (unitType.equals("Temperature")) result = UnitConverter.convertTemp(fromUnitPos, toUnitPos, input);
+                    else result = UnitConverter.convert(unitType, fromUnitPos, toUnitPos, input);
+                    binding.txtResult.setText(String.format("%.2f", result));
+                }
+                catch (Exception e) {
+                    Toast.makeText(MainActivity.this, "Please enter a valid number.", Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
